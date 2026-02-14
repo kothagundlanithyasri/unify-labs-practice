@@ -1,11 +1,35 @@
-<!-- 
-  DAY 14 PRACTICE LAB
-  Practice the concepts from today's video lecture below.
--->
-<div id="root">
-    <div class="lab-container">
-        <h1>Lab <span>Session</span> {{ selectedDay }}</h1>
-        <p>Console is active. Use the <strong>JS Tab</strong> to practice logic.</p>
-        <div id="display" class="debug-panel">Waiting for JS input...</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Concepts Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>JavaScript Control Structures</h1>
+
+        <section>
+            <h2>User Interaction</h2>
+            <button onclick="showAlert()">Alert</button>
+            <button onclick="userPrompt()">Prompt</button>
+            <button onclick="userConfirm()">Confirm</button>
+        </section>
+
+        <section>
+            <h2>Conditionals</h2>
+            <input type="number" id="numInput" placeholder="Enter number" value="75">
+            <button onclick="demoConditionals()">Test If/Switch/Ternary</button>
+        </section>
+
+        <section>
+            <h2>Loops</h2>
+            <button onclick="demoLoops()">Run Loops</button>
+        </section>
+
+        <div id="output" class="output"></div>
     </div>
-</div>
+    <script src="script.js"></script>
+</body>
+</html>
