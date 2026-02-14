@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Functional Utilities Project</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div class="container">
+
+<h2>Functional Utilities</h2>
+
+<input type="text" id="textInput" placeholder="Enter your text">
+
+<button onclick="titleCase()">Title Case</button>
+
+<button onclick="countVowels()">Count Vowels</button>
+
+<button onclick="secretMessage()">Secret Message</button>
+
+<div class="result" id="output"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

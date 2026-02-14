@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Virtual Core</title>
+</head>
+
+<body>
+
+<script>
+
+let MASTER_PIN = "9999";
+let balance = 1000;
+let UNIT_PRICE = 50;
+
+let secretWord = "core";
+let secretMessage = "ACCESS GRANTED: Hidden Link → https://virtualcore.secret";
+
+// -------- STEP 1: BOOT SEQUENCE --------
+let attempts = 3;
+let accessGranted = false;
+
+while (attempts > 0) {
+
+    let enteredPin = prompt("ENTER MASTER PIN:");
+
+    if (enteredPin === MASTER_PIN) {
+        accessGranted = true;
+
+        // ASCII Banner
+        let banner =
+            "============================\n" +
+            "   WELCOME TO VIRTUAL CORE  \n" +
+            "          v1.0              \n" +
+            "============================";
+
+        alert(banner);
+        break;
+
+    } else {
+
+        attempts--;
+        alert("ACCESS DENIED. Attempts left: " + attempts);
+
+        if (attempts === 0) {
+
+            alert("SYSTEM SELF-DESTRUCT INITIATED");
+            break;
+        }
+    }
+}
+
+
+// -------- STOP PROGRAM IF FAILED LOGIN --------
+if (!accessGranted) {
+    alert("SYSTEM TERMINATED");
+}
+
+// -------- STEP 2: COMMAND KERNEL --------
+while (accessGranted) {
+
+    let command = prompt("[V-CORE]> Type command: (bank, shop, vault, exit)");
+
+    switch (command) {
+
+        // ===============================
+        // BANK MODULE
+        // ===============================
+
+        case "bank":
+
+            let bankRunning = true;
+
+            while (bankRunning) {
+
+                let bankCommand = prompt("BANK MENU: deposit, withdraw, balance, back");
+
+                switch (bankCommand) {
+
+                    case "deposit":
+
+                        let depositAmount = parseFloat(prompt("Enter amount:"));
+
+                        balance += depositAmount;
+
+                        alert("Deposited successfully. Balance: " + balance);
+
+                        break;
+
+
+                    case "withdraw":
+
+                        let withdrawAmount = parseFloat(prompt("Enter amount:"));
+
+                        if (withdrawAmount > balance) {
+
+                            alert("INSUFFICIENT FUNDS");
+
+                        } else {
+
+                            balance -= withdrawAmount;
+
+                            alert("Withdraw successful. Balance: " + balance);
+                        }
+
+                        break;
+
+
+                    case "balance":
+
+                        alert("Current Balance: " + balance);
+
+                        break;
+
+
+                    case "back":
+
+                        bankRunning = false;
+
+                        break;
+
+
+                    default:
+
+                        alert("INVALID COMMAND");
+                }
+            }
+
+            break;
+
+
+        // ===============================
+        // SHOP MODULE
+        // ===============================
+
+        case "shop":
+
+            let qty = parseInt(prompt("Enter Quantity:"));
+
+            let discount = 0;
+
+            if (qty >= 0 && qty <= 5) {
+
+                discount = 0;
+
+            } else if (qty <= 10) {
+
+                discount = 0.10;
+
+            } else {
+
+                discount = 0.20;
+            }
+
+
+            let total = qty * UNIT_PRICE;
+
+            let discountAmount = total * discount;
+
+            let finalPrice = total - discountAmount;
+
+
+            if (finalPrice > balance) {
+
+                alert("NOT ENOUGH BALANCE");
+
+            } else {
+
+                balance -= finalPrice;
+
+                alert(
+                    "Total: " + total +
+                    "\nDiscount: " + (discount * 100) + "%" +
+                    "\nFinal Price: " + finalPrice +
+                    "\nRemaining Balance: " + balance
+                );
+            }
+
+            break;
+
+
+        // ===============================
+        // VAULT MODULE
+        // ===============================
+
+        case "vault":
+
+            alert("HINT: The secret word is the name of this system");
+
+            let guess = prompt("Enter Secret Word:");
+
+            if (guess === secretWord) {
+
+                alert(secretMessage);
+
+            } else {
+
+                alert("WRONG WORD. RETURNING TO MAIN MENU");
+            }
+
+            break;
+
+
+        // ===============================
+        // EXIT
+        // ===============================
+
+        case "exit":
+
+            alert("Shutting down Virtual Core...");
+
+            accessGranted = false;
+
+            break;
+
+
+        // ===============================
+        // INVALID
+        // ===============================
+
+        default:
+
+            alert("UNKNOWN COMMAND");
+    }
+}
+
+</script>
+
+</body>
+</html>
