@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Array Data Processing Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Company Data Processing</h1>
+
+<!-- Tasks Section -->
+<div class="box">
+    <h2>Tasks</h2>
+
+    <button onclick="showTasks()">Show Tasks</button>
+
+    <p><b>Completed Tasks:</b></p>
+    <ul id="completed"></ul>
+
+    <p><b>Pending Tasks:</b></p>
+    <ul id="pending"></ul>
+</div>
+
+
+<!-- Prices Section -->
+<div class="box">
+    <h2>Prices with Tax</h2>
+
+    <button onclick="calculateTax()">Calculate</button>
+
+    <ul id="prices"></ul>
+</div>
+
+
+<!-- Expenses Section -->
+<div class="box">
+    <h2>Total Company Budget</h2>
+
+    <button onclick="totalBudget()">Calculate Total</button>
+
+    <h3 id="budget"></h3>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

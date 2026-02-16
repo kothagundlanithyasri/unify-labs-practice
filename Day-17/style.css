@@ -1,0 +1,44 @@
+body
+{
+font-family: Arial;
+background-color: #f4f4f4;
+text-align: center;
+}
+
+h1
+{
+color: darkblue;
+}
+
+.box
+{
+background: purple;
+padding: 10px;
+margin: 30px;
+border-radius: 10px;
+width: 400px;
+margin-left: auto;
+margin-right: auto;
+box-shadow: 0 0 10px blue;
+}
+
+button
+{
+padding: 10px;
+background: yellow;
+color: red;
+border: none;
+margin: 10px;
+cursor: pointer;
+}
+
+button:hover
+{
+background: purple;
+}
+
+ul
+{
+list-style: none;
+padding: 0;
+}
