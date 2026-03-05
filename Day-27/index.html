@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Product Manager</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<h1>Product Management System</h1>
+
+<div class="container">
+
+<h2>Add Product</h2>
+
+<input type="text" id="name" placeholder="Product Name">
+<input type="number" id="price" placeholder="Price">
+<input type="number" id="stock" placeholder="Stock">
+
+<button onclick="addProduct()">Add Product</button>
+
+
+<h2>Update Stock</h2>
+
+<input type="text" id="updateId" placeholder="Product ID">
+<input type="number" id="updateStock" placeholder="New Stock">
+
+<button onclick="updateStock()">Update</button>
+
+
+<h2>Delete Product</h2>
+
+<input type="text" id="deleteId" placeholder="Product ID">
+
+<button onclick="deleteProduct()">Delete</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
