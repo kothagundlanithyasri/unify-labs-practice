@@ -1,0 +1,72 @@
+body{
+font-family: Arial;
+background:#f4f6f8;
+margin:0;
+padding:0;
+}
+
+header{
+background:#23395d;
+color:white;
+text-align:center;
+padding:15px;
+}
+
+.form-section{
+width:400px;
+margin:30px auto;
+background:white;
+padding:20px;
+border-radius:8px;
+box-shadow:0px 2px 10px rgba(0,0,0,0.1);
+}
+
+h2{
+margin-bottom:15px;
+}
+
+input, textarea{
+width:100%;
+padding:10px;
+margin-bottom:10px;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+textarea{
+height:100px;
+}
+
+button{
+background:#2b7cff;
+color:white;
+border:none;
+padding:10px;
+border-radius:5px;
+cursor:pointer;
+}
+
+button:hover{
+background:#1f5fd6;
+}
+
+.posts{
+width:400px;
+margin:20px auto;
+}
+
+.post{
+background:white;
+padding:15px;
+margin-bottom:10px;
+border-radius:6px;
+box-shadow:0px 1px 6px rgba(0,0,0,0.1);
+}
+
+.post h3{
+margin:0;
+}
+
+.post p{
+margin:5px 0;
+}
